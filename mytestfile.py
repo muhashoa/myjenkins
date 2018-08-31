@@ -9,6 +9,9 @@ class TestUM(unittest.TestCase):
     def test_numbers_3_4(self):
         self.assertEqual( 3*4, 12)
 
+    def test_numbers_4_4(self):
+        self.assertEqual( 4*4, 16)
+
     def test_numbers_5_4(self):
         self.assertEqual( 5*4, 20) 
 
