@@ -11,5 +11,10 @@ pipeline {
         echo 'bye'
       }
     }
+    stage('') {
+      steps {
+        sh 'python mytestfile.py'
+      }
+    }
   }
 }
