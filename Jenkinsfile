@@ -19,7 +19,7 @@ pipeline {
     stage('error') {
       steps {
         withSonarQubeEnv('sonarqube step') {
-          waitForQualityGate()
+          sh ' sh "${scannerHome}/bin/sonar-scanner"'
         }
 
         sh ' sh "${scannerHome}/bin/sonar-scanner"'
