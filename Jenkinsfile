@@ -22,6 +22,7 @@ pipeline {
           waitForQualityGate()
         }
 
+        sh ' sh "${scannerHome}/bin/sonar-scanner"'
       }
     }
   }
