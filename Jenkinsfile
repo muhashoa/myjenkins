@@ -16,9 +16,13 @@ pipeline {
         sh 'python mytestfile.py'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         waitForQualityGate()
+        withSonarQubeEnv('sonarqube step') {
+          waitForQualityGate()
+        }
+
       }
     }
   }
