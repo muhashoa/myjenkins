@@ -16,13 +16,9 @@ pipeline {
         sh 'python mytestfile.py'
       }
     }
-    stage('SonarQubeLife') {
+    stage('sonar') {
       steps {
-        withSonarQubeEnv('sonarqubestep') {
-          sh '$scannerHome/bin/sonar-scanner'
-          echo 'ending'
-        }
-
+        sh '$scannerHome/bin/sonar-scanner'
       }
     }
   }
