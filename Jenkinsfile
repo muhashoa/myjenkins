@@ -16,13 +16,12 @@ pipeline {
         sh 'python mytestfile.py'
       }
     }
-    stage('error') {
+    stage('SonarQubeLife') {
       steps {
         withSonarQubeEnv('sonarqube step') {
           sh ' sh "${scannerHome}/bin/sonar-scanner"'
         }
 
-        sh ' sh "${scannerHome}/bin/sonar-scanner"'
       }
     }
   }
