@@ -18,7 +18,6 @@ pipeline {
     }
     stage('error') {
       steps {
-        waitForQualityGate()
         withSonarQubeEnv('sonarqube step') {
           waitForQualityGate()
         }
